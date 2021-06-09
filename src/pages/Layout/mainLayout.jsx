@@ -1,17 +1,17 @@
 import React from "react";
 import "./mainLayout.scss";
 
-const MainLayout = () => {
+const MainLayout = ({ children, classContent }) => {
   return (
     <div className="mainLayoutContainer">
-      <Sidebar />
+      {/* <Sidebar />
       <header className="mainLayoutContainer__header">
         <Navbar
           className="mainLayoutContainer__header__navbar"
           drawerToggleClick={drawerToggleClick}
         />
         <SideDrawer show={sideDraweOpen} />
-      </header>
+      </header> */}
       <section className={`mainLayoutContainer__content ${classContent}`}>
         {children}
       </section>
