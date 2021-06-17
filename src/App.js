@@ -1,16 +1,14 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "./pages/Login";
+import { BrowserRouter as Router } from "react-router-dom";
+import PublicRouter from "./router/PublicRouter";
+import PrivateRouter from "./router/PrivateRouter";
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route path="/">
-          <Login />
-        </Route>
-      </Switch>
+      <PublicRouter />
+      <PrivateRouter />
     </Router>
   );
 }
