@@ -1,12 +1,15 @@
 @import "./globals.scss";
 
 .ButtonForm {
-  background: tomato;
-  border: 1px solid $primary;
+  cursor: pointer;
+  background: $secondary;
+  border: none;
   height: 2rem;
-  border-radius: 18px;
+  border-radius: $radius-light;
   color: white;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   &:hover {
-    transform: scale(1.5);
+    border: 1px solid $primary;
   }
 }

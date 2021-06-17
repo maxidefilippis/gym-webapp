@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/buttons.scss";
 
-const ButtonForm = ({ m, mt, mb, w }) => {
+const ButtonForm = ({ children, m, mt, mb, w }) => {
   const style = {
     margin: `${m}rem`,
     marginTop: `${mt}rem`,
@@ -10,7 +10,7 @@ const ButtonForm = ({ m, mt, mb, w }) => {
   };
   return (
     <button className="ButtonForm" style={style} type="submit">
-      Submit
+      {children}
     </button>
   );
 };
