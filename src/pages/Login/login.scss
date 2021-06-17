@@ -1,18 +1,31 @@
+@import "../../styles/globals.scss";
+
 .login {
+  &__title {
+    padding: 0.6rem 2rem;
+    transform: rotate(-1deg);
+    position: absolute;
+    top: -3rem;
+    box-shadow: $black-shadow;
+    background-color: rgba(255, 255, 255, 1);
+  }
   &__container {
+    position: relative;
     margin: 0 auto;
-    background-color: rgba(12, 12, 12, 0.4);
+    background-color: rgba(12, 12, 12, 0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 20vw;
+    width: 25vw;
+    min-height: 22rem;
+    min-width: 19rem;
     height: 50vh;
     border-radius: 4px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: $white-shadow;
     > h1 {
       margin-bottom: 1rem;
-      color: white;
+      color: tomato;
     }
   }
   &__actions {
@@ -20,7 +33,7 @@
     flex-direction: column;
     > span {
       margin-top: 0.2rem;
-      color: white;
+      color: $primary;
       font-size: 14px;
     }
   }
@@ -31,12 +44,13 @@
       align-items: center;
       margin-top: 2rem;
       > label {
+        color: $primary;
         font-size: 1rem;
         font-weight: 600;
         margin-bottom: 0.3rem;
       }
       > input {
-        border: 1px solid tomato;
+        border: 1px solid $primary;
         border-radius: 5px;
         margin-bottom: 1rem;
         height: 1.5rem;
@@ -48,7 +62,7 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         background: tomato;
-        border: 1px solid white;
+        border: 1px solid $primary;
         height: 2rem;
         width: 7rem;
         border-radius: 18px;

@@ -17,7 +17,7 @@ const Login = () => {
   return (
     <MainLayout>
       <div className="login__container">
-        <h1>LOGIN</h1>
+        <h1 className="login__title">LOGIN</h1>
         <form onSubmit={formik.handleSubmit} className="login__form__container">
           <label htmlFor="username">Username</label>
           <input
