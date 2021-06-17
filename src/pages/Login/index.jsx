@@ -1,26 +1,33 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import "./login.scss";
 import { useFormik } from "formik";
 import MainLayout from "../Layout/mainLayout";
 import { ButtonForm } from "../../components";
 
 const Login = () => {
+  const { push } = useHistory();
   const formik = useFormik({
     initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
+      username: "",
+      password: "",
     },
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: function (values) {
+      const userValidate =
+        values.username === "admin" && values.password === "admin"
+          ? true
+          : false;
+
+      userValidate && push("/home");
     },
   });
+
   return (
     <MainLayout>
       <div className="login__container">
         <h1 className="login__title">LOGIN</h1>
         <form onSubmit={formik.handleSubmit} className="login__form__container">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">Usuario</label>
           <input
             id="username"
             name="username"
@@ -28,15 +35,17 @@ const Login = () => {
             onChange={formik.handleChange}
             value={formik.values.username}
           />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Contraseña</label>
           <input
             id="password"
             name="password"
             type="password"
             onChange={formik.handleChange}
-            value={formik.values.password}
+            value={formik.values.contraseña}
           />
-          <ButtonForm mt={1} mb={1} w={10} />
+          <ButtonForm mt={2} mb={1} w={11}>
+            Ingresar
+          </ButtonForm>
         </form>
         <div className="login__actions">
           <span>¿No estás registrado?</span>
