@@ -1,7 +1,8 @@
 import React from "react";
+import "./login.scss";
 import { useFormik } from "formik";
 import MainLayout from "../Layout/mainLayout";
-import "./login.scss";
+import { ButtonForm } from "../../components";
 
 const Login = () => {
   const formik = useFormik({
@@ -35,8 +36,7 @@ const Login = () => {
             onChange={formik.handleChange}
             value={formik.values.password}
           />
-
-          <button type="submit">Submit</button>
+          <ButtonForm mt={1} mb={1} w={10} />
         </form>
         <div className="login__actions">
           <span>¿No estás registrado?</span>
