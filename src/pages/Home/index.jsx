@@ -1,4 +1,4 @@
-import "./home.scss";
+import "./index.scss";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import MainLayout from "../Layout/mainLayout";

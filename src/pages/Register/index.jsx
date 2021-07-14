@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import "./register.scss";
+import "./index.scss";
 import { useFormik } from "formik";
 import MainLayout from "../Layout/mainLayout";
 import { ButtonForm } from "../../components";
@@ -26,7 +26,10 @@ const Register = () => {
     <MainLayout>
       <div className="register__container">
         <h1 className="register__title">register</h1>
-        <form onSubmit={formik.handleSubmit} className="register__form__container">
+        <form
+          onSubmit={formik.handleSubmit}
+          className="register__form__container"
+        >
           <label htmlFor="username">Usuario</label>
           <input
             id="username"

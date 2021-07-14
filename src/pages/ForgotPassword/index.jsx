@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import MainLayout from "../Layout/mainLayout";
 import { ButtonForm } from "../../components";
 
-const Login = () => {
+const ForgotPassword = () => {
   const { push } = useHistory();
   const formik = useFormik({
     initialValues: {
@@ -24,9 +24,12 @@ const Login = () => {
 
   return (
     <MainLayout>
-      <div className="login__container">
-        <h1 className="login__title">LOGIN</h1>
-        <form onSubmit={formik.handleSubmit} className="login__form__container">
+      <div className="forgotPassword__container">
+        <h1 className="forgotPassword__title">forgotPassword</h1>
+        <form
+          onSubmit={formik.handleSubmit}
+          className="forgotPassword__form__container"
+        >
           <label htmlFor="username">Usuario</label>
           <input
             id="username"
@@ -47,8 +50,8 @@ const Login = () => {
             Ingresar
           </ButtonForm>
         </form>
-        <div className="login__actions">
-          <span>¿No estás registrado?</span>
+        <div className="forgotPassword__actions">
+          <span>Iniciar sesión</span>
           <span>Olvidé mi contraseña</span>
         </div>
       </div>
@@ -56,4 +59,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default ForgotPassword;
