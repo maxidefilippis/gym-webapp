@@ -25,7 +25,7 @@ const ForgotPassword = () => {
   return (
     <MainLayout>
       <div className="forgotPassword__container">
-        <h1 className="forgotPassword__title">forgotPassword</h1>
+        <h1 className="forgotPassword__title">Forgot Password ?</h1>
         <form
           onSubmit={formik.handleSubmit}
           className="forgotPassword__form__container"

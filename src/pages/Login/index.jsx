@@ -48,8 +48,8 @@ const Login = () => {
           </ButtonForm>
         </form>
         <div className="login__actions">
-          <span>¿No estás registrado?</span>
-          <span>Olvidé mi contraseña</span>
+          <span onClick={() => push("/register")}>¿No estás registrado?</span>
+          <span onClick={() => push("/forgotPassword")}>Olvidé mi contraseña</span>
         </div>
       </div>
     </MainLayout>

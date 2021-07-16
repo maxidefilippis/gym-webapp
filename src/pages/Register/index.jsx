@@ -25,7 +25,7 @@ const Register = () => {
   return (
     <MainLayout>
       <div className="register__container">
-        <h1 className="register__title">register</h1>
+        <h1 className="register__title">Register</h1>
         <form
           onSubmit={formik.handleSubmit}
           className="register__form__container"

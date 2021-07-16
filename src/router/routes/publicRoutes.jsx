@@ -1,4 +1,4 @@
-import { Login } from "../../pages";
+import { ForgotPassword, Login, Register } from "../../pages";
 
 export const publicRoutes = [
   {
@@ -9,11 +9,11 @@ export const publicRoutes = [
   {
     path: "/register",
     exact: true,
-    component: Login,
+    component: Register,
   },
   {
     path: "/forgotPassword",
     exact: true,
-    component: Login,
+    component: ForgotPassword,
   },
 ];
