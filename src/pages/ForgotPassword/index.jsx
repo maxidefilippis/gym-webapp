@@ -25,34 +25,26 @@ const ForgotPassword = () => {
   return (
     <MainLayout>
       <div className="forgotPassword__container">
-        <h1 className="forgotPassword__title">Forgot Password ?</h1>
+        <h1 className="forgotPassword__title">¿Olvidó su contraseña?</h1>
         <form
           onSubmit={formik.handleSubmit}
           className="forgotPassword__form__container"
         >
-          <label htmlFor="username">Usuario</label>
+          <label htmlFor="username">Ingrese su e-mail</label>
           <input
-            id="username"
-            name="username"
+            id="mail"
+            name="mail"
             type="text"
             onChange={formik.handleChange}
-            value={formik.values.username}
-          />
-          <label htmlFor="password">Contraseña</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            onChange={formik.handleChange}
-            value={formik.values.contraseña}
+            value={formik.values.mail}
           />
           <ButtonForm mt={2} mb={1} w={11}>
-            Ingresar
+            Enviar código de recuperación
           </ButtonForm>
         </form>
         <div className="forgotPassword__actions">
           <span>Iniciar sesión</span>
-          <span>Olvidé mi contraseña</span>
+          <span>Registrarse</span>
         </div>
       </div>
     </MainLayout>
