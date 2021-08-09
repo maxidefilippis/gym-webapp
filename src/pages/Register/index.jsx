@@ -25,7 +25,7 @@ const Register = () => {
   return (
     <MainLayout>
       <div className="register__container">
-        <h1 className="register__title">Register</h1>
+        <h1 className="register__title">REGISTRATE</h1>
         <form
           onSubmit={formik.handleSubmit}
           className="register__form__container"
@@ -51,8 +51,10 @@ const Register = () => {
           </ButtonForm>
         </form>
         <div className="register__actions">
-          <span>Iniciar sesión</span>
-          <span>Olvidé mi contraseña</span>
+          <span onClick={() => push("/")}>Iniciar sesión</span>
+          <span onClick={() => push("/forgotPassword")}>
+            Olvidé mi contraseña
+          </span>
         </div>
       </div>
     </MainLayout>

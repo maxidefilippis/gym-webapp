@@ -25,7 +25,7 @@ const ForgotPassword = () => {
   return (
     <MainLayout>
       <div className="forgotPassword__container">
-        <h1 className="forgotPassword__title">¿Olvidó su contraseña?</h1>
+        <h1 className="forgotPassword__title">RECUPERAR CONTRASEÑA</h1>
         <form
           onSubmit={formik.handleSubmit}
           className="forgotPassword__form__container"
@@ -43,8 +43,8 @@ const ForgotPassword = () => {
           </ButtonForm>
         </form>
         <div className="forgotPassword__actions">
-          <span>Iniciar sesión</span>
-          <span>Registrarse</span>
+          <span onClick={() => push("/")}>Iniciar sesión</span>
+          <span onClick={() => push("/register")}>Registrarse </span>
         </div>
       </div>
     </MainLayout>
