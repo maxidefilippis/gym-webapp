@@ -1,9 +1,11 @@
 import "./index.scss";
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import MainLayout from "../Layout/mainLayout";
+import { ProfileViews } from "../../components/";
 
 const Home = () => {
+  const [view, setView] = useState("");
   const { push } = useHistory();
   const user = "admin";
 
@@ -18,10 +20,11 @@ const Home = () => {
           Hola <b>{user}</b>!
         </p>
         <div className="home__buttons">
-          <p>Perfil</p>
-          <p>Alumnos</p>
-          <p>Rutinas</p>
+          <p onClick={() => setView("Perfil")}>Perfil</p>
+          <p onClick={() => setView("Alumnos")}>Alumnos</p>
+          <p onClick={() => setView("Rutinas")}>Rutinas</p>
         </div>
+        <ProfileViews view={view} />
         <div className="login__actions">
           <span onClick={logout}>Cerrar sesión</span>
         </div>
