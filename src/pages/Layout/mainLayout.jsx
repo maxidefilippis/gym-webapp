@@ -5,6 +5,8 @@ const MainLayout = ({ children, classContent }) => {
   const style = {
     background: "url(./assets/fondo2.jpg)",
     backgroundSize: "100%",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   };
   return (
     <div className="mainLayoutContainer" style={style}>
